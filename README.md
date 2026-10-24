@@ -1,16 +1,11 @@
 <div align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg?v=4">
-    <img src="assets/hero-light.svg?v=4" alt="for404cat — 404, cat not found" width="100%">
+    <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg?v=5">
+    <img src="assets/hero-light.svg?v=5" alt="for404cat — 404, cat not found" width="100%">
   </picture>
 </div>
 
-<div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/tetris-dark.svg?v=1">
-    <img src="assets/tetris-light.svg?v=1" width="100%" alt="Contributions as a falling-block animation">
-  </picture>
-</div>
+
 
 <div align="center">
   <sub><a href="https://for404cat.github.io/for404cat/">FULL PROFILE / PAGES</a></sub>
