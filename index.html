@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>for404cat — profile</title>
+<style>
+  :root {
+    --paper: #F4F1E8;
+    --ink: #1B1D22;
+    --muted: #6F6A61;
+    --line: #CFC9BC;
+    --red: #B23A3A;
+    --gold: #A97C28;
+    --green: #2E8B57;
+    --blue: #3E7E9E;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #0C1016;
+      --ink: #E8E4DA;
+      --muted: #8B877D;
+      --line: #232A35;
+      --red: #D15A5A;
+      --gold: #D2A63F;
+      --green: #4DFF9A;
+      --blue: #5FB6D9;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; min-height: 100%; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", "Hiragino Sans", sans-serif;
+    overflow-x: hidden;
+  }
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: radial-gradient(var(--line) 1px, transparent 1px);
+    background-size: 24px 24px;
+    opacity: .5;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .ciallo {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    font-family: "Segoe UI", "Noto Sans TC", sans-serif;
+    font-size: clamp(80px, 13vw, 210px);
+    letter-spacing: .02em;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--ink);
+    opacity: .05;
+    transform: rotate(-7deg);
+    pointer-events: none;
+    z-index: 0;
+  }
+  .circuit, .blueprints {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 0;
+    color: var(--ink);
+  }
+  .circuit { left: 0; width: 24vw; opacity: .14; }
+  .blueprints { right: 0; width: 30vw; opacity: .18; }
+  .page {
+    position: relative;
+    z-index: 1;
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 24px 28px 56px;
+  }
+  .topbar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 0 16px;
+    border-bottom: 1px solid var(--line);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 11px;
+    letter-spacing: 1.4px;
+    color: var(--muted);
+  }
+  .topbar a { color: var(--ink); text-decoration: none; }
+  .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--red); }
+  .spacer { flex: 1; }
+  .hero { margin-top: 28px; }
+  .hero img { display: block; width: 100%; height: auto; }
+  .profile {
+    max-width: 860px;
+    margin: 38px auto 0;
+    font-size: 15px;
+    line-height: 1.8;
+  }
+  .avatar {
+    float: left;
+    width: 128px;
+    height: auto;
+    margin: 4px 24px 14px 0;
+  }
+  .profile p { margin: 0 0 16px; }
+  .profile b { font-weight: 600; }
+  code {
+    padding: .12em .38em;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: .82em;
+    background: var(--line);
+    border-radius: 3px;
+  }
+  .gender { color: var(--ink); }
+  .clear { clear: both; }
+  hr {
+    max-width: 860px;
+    margin: 32px auto;
+    border: 0;
+    border-top: 1px solid var(--line);
+  }
+  .now, .bom {
+    max-width: 860px;
+    margin: 0 auto;
+    font-size: 14px;
+    line-height: 1.8;
+  }
+  .now p { margin: 0 0 16px; }
+  .mono {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 10px;
+    letter-spacing: 2.4px;
+    color: var(--muted);
+  }
+  h2 {
+    margin: 0 0 6px;
+    font-family: "Yu Mincho", "Hiragino Mincho ProN", "Noto Serif CJK TC", Georgia, serif;
+    font-weight: 400;
+    font-size: 30px;
+    letter-spacing: .02em;
+  }
+  table {
+    width: 100%;
+    margin-top: 16px;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+  th, td {
+    padding: 8px 10px;
+    text-align: left;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+  }
+  th {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 9px;
+    font-weight: 400;
+    letter-spacing: 1.8px;
+    color: var(--muted);
+  }
+  td:first-child {
+    width: 72px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    color: var(--muted);
+  }
+  td:nth-child(2) { width: 190px; font-weight: 600; }
+  .bom-note { margin-top: 16px; color: var(--muted); font-size: 13px; }
+  .footer {
+    max-width: 860px;
+    margin: 48px auto 0;
+    padding-top: 14px;
+    border-top: 1px solid var(--line);
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 9px;
+    letter-spacing: 1.6px;
+    color: var(--muted);
+  }
+  .footer a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--line); }
+  @media (max-width: 900px) {
+    .page { padding: 18px 18px 40px; }
+    .circuit { width: 46vw; opacity: .06; }
+    .blueprints { width: 58vw; opacity: .07; }
+    .profile, .now, .bom, .footer, hr { max-width: 100%; }
+    .avatar { float: none; display: block; margin: 0 0 18px; }
+    .footer { flex-direction: column; gap: 6px; }
+    table { font-size: 12px; }
+    td:nth-child(2) { width: 130px; }
+  }
+</style>
+</head>
+<body>
+  <div class="ciallo" aria-hidden="true">Ciallo～(∠・ω&lt; )⌒★</div>
+
+  <svg class="circuit" viewBox="0 0 420 900" preserveAspectRatio="xMinYMid slice" aria-hidden="true">
+    <g fill="none" stroke="currentColor" stroke-width="1">
+      <path d="M-20 80 H70 V150 H140 V220 H60 V300 H10"/>
+      <path d="M-10 420 H50 V500 H120 V580 H40 V680 H0"/>
+      <path d="M180 -20 V60 H240 V120"/>
+      <path d="M0 760 H80 V820 H160 V880"/>
+      <circle cx="70" cy="150" r="4"/><circle cx="140" cy="220" r="4"/>
+      <circle cx="50" cy="500" r="4"/><circle cx="120" cy="580" r="4"/>
+      <rect x="-40" y="600" width="140" height="110" rx="3"/>
+      <path d="M100 620 H120 M100 640 H120 M100 660 H120 M100 680 H120"/>
+    </g>
+    <g fill="none" stroke="var(--red)" stroke-width="1" opacity=".5">
+      <path d="M-20 330 H40 V390 H100"/>
+      <circle cx="40" cy="330" r="3" fill="var(--red)"/>
+    </g>
+    <g fill="currentColor" stroke="none" font-family="ui-monospace,monospace" font-size="8" opacity=".5" letter-spacing="1.5">
+      <text x="8" y="76">VCC</text><text x="8" y="416">GND</text><text x="144" y="218">SDA</text>
+    </g>
+  </svg>
+
+  <svg class="blueprints" viewBox="0 0 600 900" preserveAspectRatio="xMaxYMid slice" aria-hidden="true">
+    <g fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round">
+      <g transform="translate(250 60) rotate(-2)">
+        <rect x="0" y="0" width="170" height="116" rx="4"/>
+        <rect x="12" y="12" width="86" height="58" rx="3"/>
+        <rect x="18" y="18" width="74" height="46" rx="2"/>
+        <path d="M12 84 H98 M12 92 H98"/>
+        <rect x="108" y="16" width="50" height="44" rx="2"/>
+        <path d="M108 26 H158 M108 36 H158 M108 46 H158 M120 16 V60 M132 16 V60 M144 16 V60"/>
+        <path d="M62 0 V-10 H108 V0"/>
+        <path d="M12 104 H158"/>
+      </g>
+      <g transform="translate(80 280) rotate(-3)">
+        <path d="M0 26 H300 M0 58 H300"/>
+        <path d="M0 26 V58 M40 26 V58 M80 26 V58 M120 26 V58 M160 26 V58 M200 26 V58 M240 26 V58 M280 26 V58 M300 26 V58"/>
+        <path d="M130 26 V12 M170 26 V12"/>
+        <path d="M126 2 H174 L150 22 Z"/>
+        <path d="M300 58 Q314 72 300 84" stroke-dasharray="3 3"/>
+      </g>
+      <g transform="translate(420 400) rotate(8)">
+        <path d="M0 10 L10 0 H100 V60 H0 Z"/>
+        <g fill="currentColor" stroke="none">
+          <rect x="8" y="10" width="3.5" height="5"/><rect x="18" y="10" width="3.5" height="5"/><rect x="28" y="10" width="3.5" height="5"/>
+          <rect x="38" y="10" width="3.5" height="5"/><rect x="48" y="10" width="3.5" height="5"/><rect x="58" y="10" width="3.5" height="5"/>
+          <rect x="68" y="10" width="3.5" height="5"/><rect x="78" y="10" width="3.5" height="5"/><rect x="88" y="10" width="3.5" height="5"/>
+          <rect x="8" y="22" width="3.5" height="5"/><rect x="18" y="22" width="3.5" height="5"/><rect x="28" y="22" width="3.5" height="5"/>
+          <rect x="38" y="22" width="3.5" height="5"/><rect x="48" y="22" width="3.5" height="5"/><rect x="58" y="22" width="3.5" height="5"/>
+          <rect x="68" y="22" width="3.5" height="5"/><rect x="78" y="22" width="3.5" height="5"/><rect x="88" y="22" width="3.5" height="5"/>
+          <rect x="8" y="34" width="3.5" height="5"/><rect x="18" y="34" width="3.5" height="5"/><rect x="28" y="34" width="3.5" height="5"/>
+          <rect x="38" y="34" width="3.5" height="5"/><rect x="48" y="34" width="3.5" height="5"/><rect x="58" y="34" width="3.5" height="5"/>
+          <rect x="68" y="34" width="3.5" height="5"/><rect x="78" y="34" width="3.5" height="5"/><rect x="88" y="34" width="3.5" height="5"/>
+        </g>
+      </g>
+    </g>
+    <g fill="currentColor" stroke="none" font-family="ui-monospace,monospace" font-size="8" opacity=".55" letter-spacing="1.4">
+      <text x="250" y="190">IBM 5100 / 1975</text>
+      <text x="250" y="202">EL PSY KONGROO</text>
+      <text x="80" y="370">TURING MACHINE / 1936</text>
+      <text x="420" y="480">PUNCH CARD / 80 COL</text>
+    </g>
+  </svg>
+
+  <main class="page">
+    <header class="topbar">
+      <span class="dot"></span>
+      <a href="https://github.com/for404cat">for404cat</a>
+      <span>/</span>
+      <span>PROFILE</span>
+      <span class="spacer"></span>
+      <span>REV. 2026.10</span>
+    </header>
+
+    <section class="hero">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg">
+        <img src="assets/hero-light.svg" alt="for404cat — 404, cat not found" width="100%">
+      </picture>
+    </section>
+
+    <section class="profile">
+      <img class="avatar" src="assets/avatar.svg" alt="for404cat mascot">
+      <p>Systems engineer, mostly Rust. I work on the boundary between hardware, the kernel, and things that were never meant to be automated.</p>
+      <p>Currently building <b>MixumART</b>, a Rust runtime for AI agents.</p>
+      <p>English for work. 中文用來吐槽。</p>
+      <p class="gender"><code>GENDER</code> — ATTACK HELICOPTER (GROUNDED). 性別武裝直升機，但目前停飛——GitHub 只讓我選「其他」。</p>
+      <div class="clear"></div>
+    </section>
+
+    <hr>
+
+    <section class="now">
+      <p><code>NOW</code> — building <b>MixumART</b> · soldering something with too many wires · obeying <code>false</code></p>
+      <p>I solder MCUs, sensors, and other things that were never meant to be connected to a computer. Not systematic. Not certified. Still running.</p>
+      <p>不是電子工程師，只是手比較癢。</p>
+    </section>
+
+    <hr>
+
+    <section class="bom">
+      <h2>bill of materials / 部品表</h2>
+      <p class="mono">TECH STACK / REV. 2026.10</p>
+      <table>
+        <thead><tr><th>REF</th><th>PART</th><th>NOTES</th></tr></thead>
+        <tbody>
+          <tr><td>U1</td><td>Rust</td><td>primary language</td></tr>
+          <tr><td>U2</td><td>C</td><td>when Rust is too polite</td></tr>
+          <tr><td>U3</td><td>Python</td><td>glue and scripts</td></tr>
+          <tr><td>U4</td><td>TypeScript</td><td>when it has to run in a browser</td></tr>
+          <tr><td>R1</td><td>Linux</td><td>host environment</td></tr>
+          <tr><td>R2</td><td>Docker</td><td>containment</td></tr>
+          <tr><td>C1</td><td>STM32 / ESP32</td><td>small things that blink</td></tr>
+          <tr><td>C2</td><td>KiCad / PCB</td><td>custom boards</td></tr>
+          <tr><td>TP1</td><td>Oscilloscope</td><td>trust issues</td></tr>
+        </tbody>
+      </table>
+      <p class="bom-note">缺料是常態。</p>
+    </section>
+
+    <footer class="footer">
+      <span>NO CATS WERE HARMED / 404</span>
+      <span><a href="play.html">PLAY / TETRIS</a> · <a href="https://github.com/for404cat">GITHUB</a></span>
+    </footer>
+  </main>
+</body>
+</html>
