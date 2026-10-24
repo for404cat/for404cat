@@ -1,7 +1,7 @@
 <div align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg?v=5">
-    <img src="assets/hero-light.svg?v=5" alt="for404cat — 404, cat not found" width="100%">
+    <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg?v=6">
+    <img src="assets/hero-light.svg?v=6" alt="for404cat — 404, cat not found" width="100%">
   </picture>
 </div>
 
