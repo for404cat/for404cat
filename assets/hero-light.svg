@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="440" viewBox="0 0 1200 440" role="img" aria-label="for404cat — 404, cat not found">
-  <title>for404cat — 404, cat not found</title>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="440" viewBox="0 0 1200 440" role="img" aria-label="For404cat — 404, cat not found">
+  <title>For404cat — 404, cat not found</title>
   <defs>
     <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">
       <circle cx="1.5" cy="1.5" r="1" fill="#DAD4C6"/>
@@ -521,7 +521,7 @@
     <text x="102" y="102" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="17" font-weight="700" fill="#F6F3EC">404</text>
   </g>
 
-  <text x="80" y="200" font-family="Yu Mincho, YuMincho, 'Hiragino Mincho ProN', 'Noto Serif JP', 'Noto Serif CJK TC', 'Songti TC', PMingLiU, Georgia, serif" font-size="74" letter-spacing="0.4" fill="#1B1D22">for<tspan fill="#B23A3A">404</tspan>cat</text>
+  <text x="80" y="200" font-family="Yu Mincho, YuMincho, 'Hiragino Mincho ProN', 'Noto Serif JP', 'Noto Serif CJK TC', 'Songti TC', PMingLiU, Georgia, serif" font-size="74" letter-spacing="0.4" fill="#1B1D22">For<tspan fill="#B23A3A">404</tspan>cat</text>
   <text x="82" y="238" font-family="Yu Mincho, 'Noto Serif CJK TC', 'Noto Serif JP', PMingLiU, 'Songti TC', Georgia, serif" font-size="18" fill="#1B1D22">一只不正经的貓</text>
   <text x="82" y="264" font-family="Yu Mincho, 'Noto Serif CJK TC', 'Noto Serif JP', PMingLiU, 'Songti TC', Georgia, serif" font-size="13" fill="#6F6A61">一隻不可愛也不聽話的吉祥物</text>
 
@@ -533,6 +533,6 @@
     <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.45;0.5;1" dur="1.4s" repeatCount="indefinite"/>
   </rect>
 
-  <text x="82" y="420" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="9" letter-spacing="2.4" fill="#6F6A61">REV. 2026.10</text>
+  <text x="82" y="420" font-family="Yu Mincho, 'Noto Serif CJK TC', 'Noto Serif JP', PMingLiU, 'Songti TC', Georgia, serif" font-size="10" letter-spacing="2.2" fill="#6F6A61">技术宅拯救世界</text>
   <text x="1118" y="420" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="9" letter-spacing="2.4" fill="#6F6A61">STATUS / 404</text>
 </svg>

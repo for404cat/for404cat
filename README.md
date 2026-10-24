@@ -1,7 +1,7 @@
 <div align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg?v=6">
-    <img src="assets/hero-light.svg?v=6" alt="for404cat — 404, cat not found" width="100%">
+    <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg?v=7">
+    <img src="assets/hero-light.svg?v=7" alt="For404cat — 404, cat not found" width="100%">
   </picture>
 </div>
 
@@ -38,7 +38,7 @@ connected to a computer. Not systematic. Not certified. Still running.
 
 ### bill of materials / 部品表
 
-`TECH STACK / REV. 2026.10`
+`TECH STACK / BOM`
 
 | REF | PART | NOTES |
 | --- | --- | --- |
